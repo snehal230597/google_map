@@ -6,6 +6,7 @@ import 'package:googlemap/google_places_api.dart';
 import 'package:googlemap/network_image_marker.dart';
 import 'package:googlemap/polygon_screen.dart';
 import 'package:googlemap/polyline_screen.dart';
+import 'package:googlemap/style_gmap_screen.dart';
 import 'package:googlemap/user_current_location.dart';
 import 'package:googlemap/convert_latlang_to_address.dart';
 import 'package:googlemap/home_screen.dart';
@@ -155,6 +156,21 @@ class _BaseScreenState extends State<BaseScreen> {
                     },
                     style: ElevatedButton.styleFrom(primary: Colors.pink),
                     child: Text('Marker Image'),
+                  ),
+                ),
+                SizedBox(
+                  width: 150,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => StyleGoogleMapScreen(),
+                        ),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(primary: Colors.pink),
+                    child: Text('Style Gmap'),
                   ),
                 ),
               ],
